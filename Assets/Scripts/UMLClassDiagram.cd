@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="Monsterkampf Simulator">
+    <Position X="7.05" Y="0.9" Height="0.291" Width="1.608" />
+  </Comment>
+  <Comment CommentText="Character System">
+    <Position X="2.392" Y="1.833" Height="0.291" Width="1.192" />
+  </Comment>
+  <Comment CommentText="    GUI">
+    <Position X="7.417" Y="1.717" Height="0.291" Width="0.7" />
+  </Comment>
+  <Comment CommentText="Kampfsystem">
+    <Position X="11.042" Y="1.633" Height="0.291" Width="0.975" />
+  </Comment>
+  <Comment CommentText="Menus.conf&#xD;&#xA;MenuID,&#xD;&#xA;GameObject, &#xD;&#xA;MenuScript">
+    <Position X="7.083" Y="4" Height="0.867" Width="1.358" />
+  </Comment>
+  <Class Name="ArenaManager">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ArenaManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Character">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBAAAAAAARAAAIAAAAgIgIAAAAAAIAAAgRAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllyCharacter">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAIgAAAAAAAAIAEAAAAABAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllyCharacterPreset" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAIEAAABAAAAAAAAAIAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacterPreset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuManager">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseMenu">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Buff">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Buff.BuffEEffects" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Buff.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAAAQAAAAAAAAgABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buff.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

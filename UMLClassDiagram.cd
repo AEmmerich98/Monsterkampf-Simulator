@@ -4,11 +4,73 @@
     <Position X="5.45" Y="0.825" Height="0.291" Width="1.608" />
   </Comment>
   <Class Name="ArenaManager">
-    <Position X="5.5" Y="1.25" Width="1.5" />
+    <Position X="5.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ArenaManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Character">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAABAAAIAAAAAIAIAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Character" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="1.962" />
+        <Point X="3.375" Y="1.962" />
+        <Point X="3.375" Y="2.23" />
+        <Point X="3.75" Y="2.23" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllyCharacter">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Character" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="1.962" />
+        <Point X="3.375" Y="1.962" />
+        <Point X="3.375" Y="4.169" />
+        <Point X="3.75" Y="4.169" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAIgAAAAAAAAIAEAAAAABAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllyCharacterPreset">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacterPreset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.ScriptableObject" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="EActions">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAAgAAAAAAAAAAEAAABIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EClasses">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllyCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
