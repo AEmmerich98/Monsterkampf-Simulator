@@ -17,8 +17,15 @@
   </Comment>
   <Class Name="ArenaManager">
     <Position X="10.75" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ArenaManager.MyDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ArenaManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAIAACAAABoAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ArenaManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -48,20 +55,6 @@
     <TypeIdentifier>
       <HashCode>AAAAABAAIEAAABAAAAAAAAAIAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Assets\Scripts\AllyCharacterPreset.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MenuManager">
-    <Position X="7" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MenuManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BaseMenu">
-    <Position X="7" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BaseMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="Buff">

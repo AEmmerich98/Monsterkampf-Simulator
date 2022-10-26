@@ -9,17 +9,22 @@ using UnityEngine;
 public abstract class Character
 {
     //protected
-    public float CurrentHp, MaxHp, AttackPoints, DefensePoints, AgilityPoints;
-	private const float UPPER_DAMAGE_MULTI = 1.2f, LOWER_DAMAGE_MULTI = 0.9f;
-	public float GetAgility { get { return AgilityPoints; } }
+    protected float CurrentHP, MaxHP, AttackPoints, DefensePoints, AgilityPoints;
+	protected const float UPPER_DAMAGE_MULTI = 1.35f, LOWER_DAMAGE_MULTI = 0.85f;
+
+    public float GetCurrentHP { get => CurrentHP; }
+    public float GetMaxHP { get => MaxHP; }
+    public float GetAP { get => AttackPoints; }
+    public float GetDP { get => DefensePoints; }
+    public float GetAgP { get => AgilityPoints; }
 
     //Stack?
 	private List<Buff> ActiveBuffs = new List<Buff>();
 
     public Character(float _hp, float _ap, float _dp, float _agp)
     {
-        MaxHp = _hp;
-        CurrentHp = _hp;
+        MaxHP = _hp;
+        CurrentHP = _hp;
         AttackPoints = _ap;
         DefensePoints = _dp;
         AgilityPoints = _agp;
@@ -29,7 +34,7 @@ public abstract class Character
 	{
         System.Random random = new System.Random();
 
-        if (AttackPoints * random.Next(1, 11) * 0.20f > _target.GetAgility)
+        if (AttackPoints * random.Next(1, 11) * 0.20f > _target.GetAgP)
 		{
             //Hit
             float dmg = (float)(AttackPoints * (random.NextDouble() * (UPPER_DAMAGE_MULTI - LOWER_DAMAGE_MULTI) + LOWER_DAMAGE_MULTI));
@@ -45,7 +50,7 @@ public abstract class Character
 	{
         if (_dmg > AttackPoints)
         {
-            CurrentHp -= _dmg - DefensePoints;
+            CurrentHP -= _dmg - DefensePoints;
         }
 	}
 
@@ -71,9 +76,9 @@ public abstract class Character
         {
             case Buff.BuffEEffects.ModifyHealth:
                 if (!_buff.IsDebuff)
-                    CurrentHp += _buff.Strength * mod;
+                    CurrentHP += _buff.Strength * mod;
                 else
-                    CurrentHp -= _buff.Strength * mod;
+                    CurrentHP -= _buff.Strength * mod;
                 break;
 
             case Buff.BuffEEffects.ModifyAttack:
@@ -109,8 +114,7 @@ public abstract class Character
         }
     }
 
-
-	public void ResolveBuffs()
+    public void ResolveBuffs()
 	{
         for (int i = 0; i < ActiveBuffs.Count; i++)
         {
@@ -121,4 +125,9 @@ public abstract class Character
         
         //Remove expired Buffs
 	}
+
+    public void ClearBuffs()
+    {
+        ActiveBuffs.Clear();
+    }
 }
