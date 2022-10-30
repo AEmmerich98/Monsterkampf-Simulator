@@ -4,32 +4,73 @@ using System.Collections.Generic;
 using UnityEditor.Events;
 using UnityEngine;
 using UnityEngine.Events;
+using MonsterkampfEngine;
 
 public class ArenaManager : MonoBehaviour
 {
-    public AllyCharacterPreset[] Presets;
+    public static ArenaManager Instance;
 
-    private AllyCharacter[] TestCharacters;
+    public AllyCharacterPreset[] AllyPresets;
+    //public EnemyPreset[] EnemyPresets;
 
-    private const int MAXCHARACTERS = 3;
+    public Character[] TestCharacters;
+    //public CharacterInfo[] TestCharactersInfos;
+
+    private const int MAXALLIES = 3;
+    private const int MAXENEMIES = 6;
 
     [SerializeField]
     private GameObject ActionsTab;
 
     private delegate void MyDelegate(EActions _action);
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+
+        
+        for (int i = 0; i < 3; i++)
+        {
+            //wird 3 mal ausgeführt
+        }
+
+        int numberOfRepeats = 3;
+        for (int i = 0; i < numberOfRepeats; i++)
+        {
+            //wird 3 mal ausgeführt
+        }
+
+        //DontDestroyOnLoad(this.gameObject);
+
+        TestCharacters = new Character[MAXALLIES + MAXENEMIES];
+        for (int i = 0; i < MAXALLIES; i++)
+        {
+            TestCharacters[i] = new AllyCharacter(AllyPresets[i].MaxHp, AllyPresets[i].AttackPoints, AllyPresets[i].DefensePoints, AllyPresets[i].AgilityPoints, "Ally" + i, AllyPresets[i].CharacterClass, AllyPresets[i].Actions);
+            //TestCharactersInfos[i] = TestCharacters[i].characterInfo;
+        }
+
+        for (int i = MAXALLIES; i < MAXALLIES + MAXENEMIES; i++)
+        {
+            TestCharacters[i] = new Enemy(50f, 15f, 2.5f, 2.5f, "Enemy" + (i - MAXALLIES));
+            //TestCharactersInfos[i] = TestCharacters[i].characterInfo;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        TestCharacters = new AllyCharacter[MAXCHARACTERS];
-        TestCharacters[0] = new AllyCharacter(Presets[0]);
-        TestCharacters[1] = new AllyCharacter(Presets[1]);
-        TestCharacters[2] = new AllyCharacter(Presets[1]);
-
-
-
         SelectableText[] selectableTexts = ActionsTab.GetComponentsInChildren<SelectableText>();
-        for (int i = 0; i < TestCharacters[0].Actions.Length; i++)
+        AllyCharacter[] allies = { (AllyCharacter)TestCharacters[0], (AllyCharacter)TestCharacters[1], (AllyCharacter)TestCharacters[2] };
+
+        for (int i = 0; i < allies[0].Actions.Length; i++)
         {
             //myDelegate = LogAction;
             //myDelegate(TestCharacters[0].Actions[i]);
@@ -39,7 +80,7 @@ public class ArenaManager : MonoBehaviour
             //UnityEventTools.RegisterPersistentListener(selectableTexts[i].mOnConfirm, 0, LogTest);
             selectableTexts[i].mOnConfirm.AddListener(LogTest);
 
-            selectableTexts[i].SetText(TestCharacters[0].Actions[i].ToString());
+            selectableTexts[i].SetText(allies[0].Actions[i].ToString());
         }
 
         //Debug.Log(TestCharacters[1].CurrentHp);

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterClass: 0
   Actions: 0000000001000000020000000500000006000000
-  MaxHp: 150
-  AttackPoints: 50
-  DefensePoints: 15
-  AgilityPoints: 5
+  MaxHp: 100
+  AttackPoints: 15
+  DefensePoints: 10
+  AgilityPoints: 10

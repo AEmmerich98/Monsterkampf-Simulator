@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2135e7f5b7367ba40953d97f0ec364a2, type: 3}
-  m_Name: Super Wobblx
+  m_Name: OP Warrior
   m_EditorClassIdentifier: 
-  CharacterClass: 1
-  Actions: 
-  MaxHp: 0
-  AttackPoints: 0
-  DefensePoints: 0
-  AgilityPoints: 0
+  CharacterClass: 0
+  Actions: 000000000100000006000000
+  MaxHp: 999.9
+  AttackPoints: 999.9
+  DefensePoints: 999.9
+  AgilityPoints: 999.9

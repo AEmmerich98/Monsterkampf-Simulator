@@ -15,6 +15,6 @@ MonoBehaviour:
   CharacterClass: 1
   Actions: 000000000100000002000000030000000500000006000000
   MaxHp: 100
-  AttackPoints: 50
-  DefensePoints: 5
-  AgilityPoints: 10
+  AttackPoints: 20
+  DefensePoints: 7.5
+  AgilityPoints: 5
